@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.myapp.mobile" version="2.25" xmlns="http://www.w3.org/ns/widgets">
+<widget id="com.myapp.mobile" version="2.25" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
   <name>The Coffee Time</name>
   <description>The Coffee Time mobile application</description>
   <author email="srikanth33722@gmail.com" href="http://thecoffeetimes.in/">Srikanth IT Services</author>

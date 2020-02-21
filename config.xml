@@ -3,6 +3,10 @@
   <name>The Coffee Time</name>
   <description>The Coffee Time mobile application</description>
   <author email="srikanth33722@gmail.com" href="http://thecoffeetimes.in/">Srikanth IT Services</author>
+  <access origin="*"/>
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-navigation href="https://www.google.com/maps/embed/*" />
   <preference name="phonegap-version" value="cli-7.1.0" />
   <preference name="permissions" value="none" />
   <preference name="orientation" value="portrait" />
@@ -12,8 +16,9 @@
   <plugin name="cordova-plugin-inappbrowser" spec="1.3.0" />
   <plugin name="cordova-plugin-device" spec="1.1.2" />
   <plugin name="cordova-plugin-splashscreen" spec="3.2.2" />
-  <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" source="pgb" />
+  <gap:plugin name="cordova-plugin-whitelist" source="npm" />
 
   <icon src="img/Cup-01.png" />
   <splash src="img/Cup-01.png" />
+  
 </widget>

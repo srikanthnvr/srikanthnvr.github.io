@@ -3,7 +3,7 @@
   <name>The Coffee Time</name>
   <description>The Coffee Time mobile application</description>
   <author email="srikanth33722@gmail.com" href="http://thecoffeetimes.in/">Srikanth IT Services</author>
-  <preference name="phonegap-version" value="cli-6.3.0" />
+  <preference name="phonegap-version" value="cli-6.5.0" />
   <preference name="permissions" value="none" />
   <preference name="orientation" value="portrait" />
   <preference name="target-device" value="universal" />

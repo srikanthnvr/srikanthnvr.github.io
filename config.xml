@@ -19,6 +19,6 @@
   <gap:plugin name="cordova-plugin-whitelist" source="npm" />
 
   <icon src="img/Cup-01.png" />
-  <splash src="img/Cup-01.png" />
+  <splash src="img/cup-splash.png" />
   
 </widget>

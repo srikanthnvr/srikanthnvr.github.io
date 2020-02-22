@@ -1,3 +1,7 @@
+/* =================================== */
+/*  Elements Page Styles
+/* =================================== */
+
 $default: #f9f9ff;
 $primary: $primary-color;
 $success: #4cd3e3;
@@ -6,14 +10,117 @@ $warning: #f4e700;
 $danger: #f44a40;
 $link: #f9f9ff;
 $disable: (#222222, .3);
+
+
+/*---------- Start Elements Page -------------*/
+
+.whole-wrap {
+    background-color: #f9f9ff;
+}
+
+.generic-banner {
+    margin-top: 60px;
+    background-color: $primary-color;
+    text-align: center;
+    .height {
+        height: 600px;
+        @include media-breakpoint-down (sm) {
+            height: 400px;
+        }
+    }
+    .generic-banner-content {
+        h2 {
+            line-height: 1.2em;
+            margin-bottom: 20px;
+            br {
+                @include media-breakpoint-down (md) {
+                    display: none;
+                }
+            }
+        }
+        p {
+            text-align: center;
+            font-size: 16px;
+            br {
+                @include media-breakpoint-down (md) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.generic-content {
+    h1 {
+        font-weight: 600;
+    }
+}
+
+.about-generic-area {
+    background: $white;
+    .border-top-generic {}
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.white-bg {
+    background: $white;
+}
+
+.section-top-border {
+    padding: 50px 0;
+    border-top: 1px dotted #eee;
+}
+
+.switch-wrap {
+    margin-bottom: 10px;
+    p {
+        margin: 0;
+    }
+}
+
+
+/*---------- End Elements Page -------------*/
+
+
+
+
 .sample-text-area {
-	background: $white;
+    background: #f9f9ff;
 	padding: 100px 0 70px 0;
 }
+
+.sample-text{
+	margin-bottom:0;
+}
+
 .text-heading {
 	margin-bottom: 30px;
 	font-size: 24px;
 }
+
+.typo-list{
+	margin-bottom:10px;
+}
+
+
+.typo-sec{
+	@media(max-width:767px){
+		margin-bottom:30px;
+	}
+}
+
+
+.element-wrap{
+	@media(max-width:767px){
+		margin-top:30px;
+	}
+}
+
+
+
+
 b,sup, sub, u, del {
 	color: $primary;
 }
@@ -48,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 		padding: 70px 15px;
 		border-top: 1px dotted #eee;
 	}
-	background: $white;
+	background: #f9f9ff;
 }
 .button-group-area {
 	.genric-btn {
@@ -59,6 +166,13 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 }
+
+
+.circle {
+	border-radius: 20px;
+}
+
+
 .genric-btn {
 	display: inline-block;
 	outline: none;
@@ -255,14 +369,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .generic-blockquote {
 	padding: 30px 50px 30px 30px;
-	background: #f9f9ff;
+	background: #fff;
 	border-left: 2px solid $primary;
 }
 .progress-table-wrap {
-	overflow-x: scroll;
+	@media(max-width:991px){
+		overflow-x: scroll;
+	}
 }
 .progress-table {
-	background: #f9f9ff;
+	background: #fff;
 	padding: 15px 0px 30px 0px;
 	min-width: 800px;
 	.serial {
@@ -345,6 +461,10 @@ h1, h2, h3, h4, h5, h6 {
 	background-position: center center !important;
 	background-size: cover !important;
 	height: 200px;
+	@include transition();
+	&:hover{
+		opacity:.8;
+	}
 }
 .list-style {
 	width: 14px;
@@ -413,7 +533,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 40px;
 	border: none;
 	outline: none;
-	background: #f9f9ff;
+	background: #fff;
 	padding: 0 20px;
 	&:focus {
 		outline: none;
@@ -441,7 +561,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 40px;
 	border: none;
 	outline: none;
-	background: #f9f9ff;
+	background: #fff;
 	padding: 0 20px;
 	height: 100px;
 	resize: none;
@@ -451,52 +571,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 // ---------  For gradient border CSS  ----------//
 
-// .primary-input {
-// 	height: 40px;
-// 	width: 100%;
-// 	position: relative;
-// 	background: $primary;
-// 	input {
-// 		display: block;
-// 		width: 100%;
-// 		line-height: 40px;
-// 		border: none;
-// 		outline: none;
-// 		padding: 0 20px;
-// 		position: absolute;
-// 		background: transparent;
-// 		top: 0;
-// 		left: 0;
-// 		z-index: 3;
-// 		+ label {
-// 			background: #f9f9ff;
-// 			position: absolute;
-// 			top: 0px;
-// 			left: 0px;
-// 			right: 0px;
-// 			bottom: 0px;
-// 			z-index: 2;
-// 			margin: 0;
-// 		}
-// 		&:focus {
-// 			outline: none;
-// 			+ label {
-// 				background: $white;
-// 				top: 1px;
-// 				left: 1px;
-// 				right: 1px;
-// 				bottom: 1px;
-// 			}
-// 		}
-// 	}
-// }
+
 .single-input-primary {
 	display: block;
 	width: 100%;
 	line-height: 40px;
 	border: 1px solid transparent;
 	outline: none;
-	background: #f9f9ff;
+	background: #fff;
 	padding: 0 20px;
 	&:focus {
 		outline: none;
@@ -509,7 +591,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 40px;
 	border: 1px solid transparent;
 	outline: none;
-	background: #f9f9ff;
+	background: #fff;
 	padding: 0 20px;
 	&:focus {
 		outline: none;
@@ -522,7 +604,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 40px;
 	border: 1px solid transparent;
 	outline: none;
-	background: #f9f9ff;
+	background: #fff;
 	padding: 0 20px;
 	&:focus {
 		outline: none;
@@ -534,7 +616,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 35px;
 	height: 17px;
 	border-radius: 8.5px;
-	background: #f9f9ff;
+	background: #fff;
 	position: relative;
 	cursor: pointer;
 	input {
@@ -566,11 +648,16 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 }
+
+.single-element-widget{
+	margin-bottom:30px;
+}
+
 .primary-switch {
 	width: 35px;
 	height: 17px;
 	border-radius: 8.5px;
-	background: #f9f9ff;
+	background: #fff;
 	position: relative;
 	cursor: pointer;
 	input {
@@ -634,7 +721,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 35px;
 	height: 17px;
 	border-radius: 8.5px;
-	background: #f9f9ff;
+	background: #fff;
 	position: relative;
 	cursor: pointer;
 	input {
@@ -698,7 +785,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 16px;
 	height: 16px;
 	border-radius: 3px;
-	background: #f9f9ff;
+	background: #fff;
 	position: relative;
 	cursor: pointer;
 	input {
@@ -735,7 +822,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 16px;
 	height: 16px;
 	border-radius: 3px;
-	background: #f9f9ff;
+	background: #fff;
 	position: relative;
 	cursor: pointer;
 	input {
@@ -771,7 +858,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 16px;
 	height: 16px;
 	border-radius: 3px;
-	background: #f9f9ff;
+	background: #fff;
 	position: relative;
 	cursor: pointer;
 	input {
@@ -811,7 +898,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 16px;
 	height: 16px;
 	border-radius: 8px;
-	background: #f9f9ff;
+	background: #fff;
 	position: relative;
 	cursor: pointer;
 	input {
@@ -847,7 +934,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 16px;
 	height: 16px;
 	border-radius: 8px;
-	background: #f9f9ff;
+	background: #fff;
 	position: relative;
 	cursor: pointer;
 	input {
@@ -883,7 +970,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 16px;
 	height: 16px;
 	border-radius: 8px;
-	background: #f9f9ff;
+	background: #fff;
 	position: relative;
 	cursor: pointer;
 	input {
@@ -926,7 +1013,7 @@ h1, h2, h3, h4, h5, h6 {
 		border: none;
 		border-radius: 0px;
 		height: 40px;
-		background: #f9f9ff;
+		background: #fff;
 		padding-left: 20px;
 		padding-right: 40px;
 		.list {
@@ -962,6 +1049,14 @@ h1, h2, h3, h4, h5, h6 {
 		right: 20px;
 	}
 }
+
+
+.left-align-p p{
+	@media(max-width: 991px){
+		margin-top:20px;
+	}
+}
+
 .form-select {
 	height: 40px;
 	width: 100%;
@@ -969,7 +1064,7 @@ h1, h2, h3, h4, h5, h6 {
 		border: none;
 		border-radius: 0px;
 		height: 40px;
-		background: #f9f9ff;
+		background: #fff!important;
 		padding-left: 45px;
 		padding-right: 40px;
 		width: 100%;

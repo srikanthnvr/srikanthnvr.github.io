@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\img",
+    "\\scss"
   ],
-  "SelectedNode": "\\menu.html",
+  "SelectedNode": "\\fonts",
   "PreviewInSolutionExplorer": false
 }
